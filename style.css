@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;500;700');
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-color: #e6e7ee;
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 17px;
+	font-weight: lighter;
+}
+h1 {
+	font-size: 40px;
+	color: #2c2c2c;
+	letter-spacing: -0.05em;
+	line-height: 95px;
+}
+h2 {
+	color: #2d4cc8;
+	font-size: 20px;
+}
+.container {
+	width: 900px;
+	margin: 20px auto;
+}
+:root {
+	--greyLight-2: #c8d0e7;
+	--white: #ffffff;
+	--shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	box-shadow: var(--shadow);
+	border-radius: 4px;
+	margin: 20px 0px;
+	text-align: center;
+}
+.profile h2,
+.profile p {
+	padding: 20px;
+}
+.title {
+	position: relative;
+}
+.title::after {
+	position: absolute;
+	bottom: 8px;
+	left: 0;
+	border-radius: 0 50%;
+	content: ' ';
+	width: 100%;
+	height: 1px;
+	background-color: #000;
+	transform: scale(0);
+	transform-origin: center;
+	transition: transform 0.5s ease-in-out;
+}
+.title:hover::after {
+	transform: scale(1);
+}
+li {
+	display: inline-block;
+	padding: 0px 20px;
+	list-style: none;
+	padding-left: 0px;
+}
+a {
+	text-decoration: none;
+}
+.btn {
+	background-color: #e6e7ee;
+	color: #2d4cc8;
+	border-color: #d1d9e6;
+	box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+	padding: 15px 20px;
+	border-radius: 4px;
+}
+.btn:hover {
+	background-color: #e6e7ee;
+	border-color: #e6e7ee;
+	box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+}
+
+.profile_pic {
+	width: 80px;
+	height: auto;
+	border-radius: 50%;
+}
+
+.profile_pic_wraper {
+	position: relative;
+	border-radius: 50%;
+	max-width: 80px;
+	width: 80px;
+	height: 80px;
+}
+.profile_pic_wraper::before,
+.profile_pic_wraper::after {
+	position: absolute;
+	content: '';
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	transition: all 0.8s ease-in-out;
+}
+.profile_pic_wraper::before {
+	width: 91px;
+	height: 89px;
+	border-right: 1px solid black;
+	border-left: 1px solid #e6e7ee;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.profile_pic_wraper::after {
+	width: 100px;
+	height: 100px;
+	border-right: 1px solid #e6e7ee;
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.profile_pic_wraper:hover::after {
+	transform: translate(-50%, -50%) rotate(360deg);
+}
+.profile_pic_wraper:hover::before {
+	transform: translate(-50%, -50%) rotate(-360deg);
+}
+
+.profile p {
+	padding-bottom: 20px;
+}
+.logo{
+  padding-top:20px;
+}
+.fab {
+	font-size: 20px;
+  background-color: #e6e7ee;
+	color: #2d4cc8;
+	border-color: #d1d9e6;
+	box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+	padding: 15px 20px;
+	border-radius: 10px;
+	transition: transform 0.3s ease-in-out;
+}
+.fab:hover {
+  background-color: #e6e7ee;
+	border-color: #e6e7ee;
+	box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+}
+.lg-cursor-pointer:before {
+  /* //centers pointer */
+  margin: -5px 0 0 -5px;
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  border-radius: 50%;
+}
+.lg-cursor-trail path {
+  stroke: cyan;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 6px;
+}
+.lg-cursor--hover .lg-cursor-pointer:before {
+  content:"✈";
+  transform: scale(1);
+  background-color: transparent;
+}
+
+@media (max-width: 960px) {
+	/* For a screen < 960px, this CSS will be read */
+	.container {
+		width: 700px;
+	}
+}
+
+@media (max-width: 720px) {
+	/* For a screen < 720px, this CSS will be read */
+	.container {
+		width: 500px;
+	}
+}
+
+@media (max-width: 540px) {
+	/* For a screen < 540px, this CSS will be read */
+	.container {
+		width: 300px;
+	}
+}
